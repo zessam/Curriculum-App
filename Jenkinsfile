@@ -31,5 +31,15 @@ pipeline {
       }
     }
 
+    stage('Log into Dockerhub / Shell Script') {
+      environment {
+        DOCKERHUB_USER = 'zezo001'
+        DOCKERHUB_PASSWORD = 'Z01015694287z'
+      }
+      steps {
+        sh 'Docker -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD'
+      }
+    }
+
   }
 }
