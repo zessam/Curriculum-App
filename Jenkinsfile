@@ -41,5 +41,11 @@ pipeline {
       }
     }
 
+    stage('Push') {
+      steps {
+        sh 'docker push zezo001/curriculum-front:latest'
+      }
+    }
+
   }
 }
